@@ -1,0 +1,15 @@
+ <div class="row my-5">
+    <div class="col-md-4">
+        <app-std-form 
+        [stdobj]="editedstd"
+        (emitobj)="newFormdata($event)"> </app-std-form>
+    </div>
+    <div class="col-md-8">
+        <app-std-table 
+        (emitstdobj)="editstudent($event)"
+        [getDataparent]="sdtArray"
+        (emitDeletstd)="deletdStd($event)" >
+
+        </app-std-table>
+    </div>
+ </div>

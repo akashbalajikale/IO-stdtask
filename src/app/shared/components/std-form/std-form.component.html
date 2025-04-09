@@ -1,0 +1,26 @@
+ <div class="card">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="text">first name</label>
+            <input type="text" required  #fname class="form-control">
+
+            
+        </div>
+        <div class="form-group">
+            <label for="text">last name</label>
+            <input type="text" required #lname class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="text">email</label>
+            <input type="text" required #email class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="text">contact</label>
+            <input type="text" required #contact class="form-control">
+        </div>
+
+        <button *ngIf="!editedMOde"  (click)="OnformData()"   class="btn btn-sm btn-info">Add student</button>
+        <button  *ngIf="editedMOde" (click)="OnUpadte()"   class="btn btn-sm btn-warning">update student</button>
+
+    </div>
+ </div>

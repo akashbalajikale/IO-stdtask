@@ -1,0 +1,35 @@
+ <table class="table table-bordered table-responsive text-capitalize" *ngIf="getDataparent.length > 0; else noData">
+    <thead>
+        <tr>
+            <th>sr no</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th> 
+            <th>contact</th>
+            <th>Edit</th>
+            <th>remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of getDataparent; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td>
+                <button (click)="onEdit(std)" class="btn btn-sm btn-block btn-outline-success">Edit </button>
+                 
+            </td>
+            <td>
+                <button (click)="onRemove(std.stdId)" class="btn btn-sm btn-block btn-outline-danger">remove </button>
+            </td>
+        </tr>
+    </tbody>
+ </table>
+
+ <ng-template #noData>
+    <p class="alert alert-warning text-capitalize">
+        no data availbe at the moments
+    </p>
+ </ng-template>
