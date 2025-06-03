@@ -18,11 +18,11 @@ export class StdTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEdit(std: istd){
-    this.emitstdobj.emit(std)
-    console.log(std);
+  // onEdit(std: istd){
+  //   this.emitstdobj.emit(std)
+  //   console.log(std);
     
-  }
+  // }
 
   onRemove(stdId: string){
     this.emitDeletstd.emit(stdId)
