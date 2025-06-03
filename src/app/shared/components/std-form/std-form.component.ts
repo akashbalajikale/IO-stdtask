@@ -19,16 +19,16 @@ export class StdFormComponent implements OnInit {
 @Output() emitobj : EventEmitter<istd> = new EventEmitter();
 @Input() stdobj !: istd;
 
-ngOnChanges(){
-  if(this.stdobj){
-    this.editedMOde = true;
+// ngOnChanges(){
+//   if(this.stdobj){
+//     this.editedMOde = true;
 
-    this.fname.nativeElement.value = this.stdobj.fname;
-    this.lname.nativeElement.value = this.stdobj.lname;
-    this.email.nativeElement.value = this.stdobj.email;
-    this.contact.nativeElement.value = this.stdobj.contact;
-  }
-}
+//     this.fname.nativeElement.value = this.stdobj.fname;
+//     this.lname.nativeElement.value = this.stdobj.lname;
+//     this.email.nativeElement.value = this.stdobj.email;
+//     this.contact.nativeElement.value = this.stdobj.contact;
+//   }
+// }
   constructor() { }
 
   ngOnInit(): void {

@@ -6,7 +6,7 @@
 
             
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="text">last name</label>
             <input type="text" required #lname class="form-control">
         </div>
@@ -17,7 +17,7 @@
         <div class="form-group">
             <label for="text">contact</label>
             <input type="text" required #contact class="form-control">
-        </div>
+        </div> -->
 
         <button *ngIf="!editedMOde"  (click)="OnformData()"   class="btn btn-sm btn-info">Add student</button>
         <button  *ngIf="editedMOde" (click)="OnUpadte()"   class="btn btn-sm btn-warning">update student</button>
